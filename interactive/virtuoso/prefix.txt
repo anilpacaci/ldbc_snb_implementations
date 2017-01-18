@@ -9,4 +9,4 @@ DB.DBA.XML_SET_NS_DECL('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#', 2);
 DB.DBA.XML_SET_NS_DECL('rdfs', 'http://www.w3.org/2000/01/rdf-schema#', 2);
 DB.DBA.XML_SET_NS_DECL('foaf', 'http://xmlns.com/foaf/0.1/', 2);
 DB.DBA.XML_SET_NS_DECL('dbpedia', 'http://dbpedia.org/resource/', 2);
-DB.DBA.XML_SET_NS_DECL('dbpedia-owl', 'http://dbpedia.org/ontology/', 2):
+DB.DBA.XML_SET_NS_DECL('dbpedia-owl', 'http://dbpedia.org/ontology/', 2);
