@@ -58,7 +58,7 @@ output in ttl, or in csv_merge_foreign.
 
 You can load data into Virtuoso on 2 possible ways:
 
-1. ttl
+1. ttl - run SPARQL queries over Virtuoso
 Use isql client program from bin folder of virtuoso installation
    $ isql <PORT_NUMBER> (where the port number is specified in virtuoso.ini)
 Use ld_dir function of load all the ttl files from a directory to
@@ -75,10 +75,11 @@ Run a couple of loaders in background: (for example 8 of them)
    SQL>  rdf_loader_run (); &
 You can check the status of loading from the table load_list:
    SQL>  select * from load_list;
+Run queries on prefix.txt to preload all the prefixes required by SPARQL queries.
 When it is finished, make a checkpoint:
    SQL>  checkpoint;
 
-2. csv_merge_foreign
+2. csv_merge_foreign - run SQL queries over Virtuoso
 Use isql client program from bin folder of virtuoso installation.
 You can run the attached 4 scritps (in folder scripts) to create the schema, and to load the data.
    $ isql <PORT_NUMBER> < ldschema.sql (where the port number is specified in virtuoso.ini)
@@ -105,6 +106,7 @@ maven repository. Go to the root directory of ldbc_driver, and run:
 -----------------------------------
 Compile Db class for Virtuoso:
 -----------------------------------
+!!!This branch should be compiled against rich_rdf branch of ldbc_driver
 
 Go to java/virtuoso folder from this checkout, and run:
    $ mvn clean package -Dmaven.compiler.source=1.7 -Dmaven.compiler.target=1.7
