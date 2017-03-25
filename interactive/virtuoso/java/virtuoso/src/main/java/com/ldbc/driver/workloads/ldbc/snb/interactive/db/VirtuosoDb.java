@@ -260,6 +260,7 @@ public class VirtuosoDb extends Db {
 			try {
 				Connection tmp = ds.getPooledConnection().getConnection();
 				tmp.setTransactionIsolation(2);
+				tmp.setAutoCommit(true);
 				return tmp;
 			} catch (SQLException e) {
 				e.printStackTrace();
