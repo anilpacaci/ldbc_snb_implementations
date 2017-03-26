@@ -25,7 +25,6 @@ def insertFriendship(filename):
             rows.append(line)
     
     with open(filename + ".friendship", 'w') as f:
-        f.write("timestamp,readcount,updatecount,readtp,updatetp\n")
         for r in rows:
             f.write(r)
 insertFriendship(fn)
