@@ -920,9 +920,9 @@ create procedure person_view_3_sparql (in personid int) {
                       (xsd:dateTime(?k_since) - xsd:dateTime("1970-01-01T00:00:00.000+00:00")) * 1000 as ?k_s
         where {
 	  ?person snvoc:id ?:personid .
-	  ?person snvoc:knows ?tmp .
-	  ?tmp snvoc:creationDate ?k_since .
-	  ?tmp snvoc:hasPerson ?fr .
+	  ?person snvoc:knows ?fr .
+      ?fr a snvoc:Person .
+	  ?person snvoc:creationDate ?k_since .
 	  ?fr snvoc:firstName ?p_friendfirstname .
 	  ?fr snvoc:lastName ?p_friendlastname .
 	}
